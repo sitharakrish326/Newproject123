@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>LOGIN FORM </title>
+</head>
+<body>
+    <h1>WELCOME ADMIN<h1>
+        {% block content %}
+    <form action="{% url 'addproducts' %}">
+        <button type="submit" value="add products">Add products</button>
+    </form>
+    <form action="{% url 'viewproducts' %}">
+        <button type="submit" value="add products">View products</button>
+    </form> 
+    {% endblock %}
+</body>
+</html>
+        

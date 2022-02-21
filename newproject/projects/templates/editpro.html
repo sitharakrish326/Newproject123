@@ -1,0 +1,16 @@
+{% extends "home.html" %}
+{% block content %}
+{% for d in data %}
+    <form method="POST" action="{% url 'edit' dataid=d.id %}" enctype="multipart/formdata">
+        {% csrf_token %}
+        <label> Product Name </label>
+        <input type="text" name="proname" value="{{d.proname}}">
+        <label> Product Price </label>
+        <input type="text" name="proprice" value="{{d.proprize}}">
+        <label> Product Description </label>
+        <input type="text" name="prodesc" value="{{d.prodesc}}">
+        <label> Product image </label>
+        <input type="file" name="image">
+    </form>
+{% endfor %}
+{% endblock %}
